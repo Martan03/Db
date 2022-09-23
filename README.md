@@ -24,4 +24,4 @@ Db::queryAll("
     - Getting all effected rows
     - Getting first effected row
     - Getting first effected row's first column
-- Easy insert and update functions to use
+- Easy to use insert and update functions
