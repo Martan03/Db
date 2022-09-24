@@ -130,7 +130,7 @@ class Db
         return self::query("
             UPDATE `$table`
             SET `" . implode('` = ?, `', array_keys($data)) . "` = ? " . $condition,
-            array_merge(array_values($data)), $params);
+            array_merge(array_values($data), $params));
     }
 
     /**
