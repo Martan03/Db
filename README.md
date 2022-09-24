@@ -2,19 +2,20 @@
 
 ## Usage:
 First you need to require database class:
-```
+```php
 require_once("Db.php");
 ```
 Then you can connect to the database. This is example on localhost:
-```
+```php
 Db::connect("127.0.0.1", "database_name", "root", "");
 ```
 And now you can start using your database. This is example of getting all rows and columns from database:
-```
+```php
 Db::queryAll("
     SELECT *
     FROM your_database
-");
+    WHERE name = ?
+", array("name"));
 ```
 
 ## List of features
