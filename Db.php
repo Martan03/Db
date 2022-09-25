@@ -22,6 +22,7 @@ class Db
      * @param string $database Database name
      * @param string $user User name
      * @param string $password Password
+     * @return bool True on success, else false
      */
     public static function connect(string $host, string $database, string $user, string $password) : bool
     {
