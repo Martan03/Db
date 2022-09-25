@@ -7,7 +7,11 @@ require_once("Db.php");
 ```
 Then you can connect to the database. This is example on localhost:
 ```php
-Db::connect("127.0.0.1", "database_name", "root", "");
+if (!Db::connect("127.0.0.1", "database_name", "root", ""))
+{
+    header("Location: 500");
+    exit;
+}
 ```
 And now you can start using your database. This is example of getting all rows and columns from database:
 ```php
