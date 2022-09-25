@@ -23,7 +23,7 @@ class Db
      * @param string $user User name
      * @param string $password Password
      */
-    public static function connect(string $host, string $database, string $user, string $password) : void
+    public static function connect(string $host, string $database, string $user, string $password) : bool
     {
         if (!isset(self::$connection))
         {
@@ -38,10 +38,10 @@ class Db
             }
             catch (PDOException $e)
             {
-                // Redirects to error page
-                header('Location: 500');
-                exit;
+                return false;
             }
+            
+            return true;
         }   
     }
 
