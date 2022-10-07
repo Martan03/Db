@@ -7,7 +7,7 @@ require_once("Db.php");
 ```
 Then you can connect to the database. This is example on localhost:
 ```php
-if (!Db::connect("127.0.0.1", "database_name", "root", ""))
+if (Db::connect("127.0.0.1", "database_name", "root", ""))
 {
     header("Location: 500");
     exit;
